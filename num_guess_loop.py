@@ -2,7 +2,7 @@
 # Created by: Katie G
 # Created on: November 8th, 2022
 # This program generates a random number, then uses a
-# # do...while loop to get the user number, uses a try...catch statement
+# do...while loop to get the user number, uses a try...catch statement
 # to check if the user input is an integer, then an if...then
 # statement to check if the user's input is within the range of 0-9.
 # the program then uses an if...then statement to check if the user guess
@@ -24,12 +24,16 @@ def main():
     # the beginning of the do... while loop that the rest of
     # the program will be contained in.
     while True:
+        # getting the user input.
         user_guess_as_string = input(
             "I am thinking of a number from 0-9. You will guess what it is please. "
         )
+        # try...catch to make sure the user's input is valid.
         try:
             user_guess_as_int = int(user_guess_as_string)
+            # if statememt to check if the user number is between 0 and 9.
             if user_guess_as_int >= 0 and user_guess_as_int <= 9:
+                # if statement to check if the user guess is equal to the random num.
                 if user_guess_as_int == random_num:
                     print("You guessed correctly! Well done!")
                     break
